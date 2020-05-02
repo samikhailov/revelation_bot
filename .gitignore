@@ -4,13 +4,11 @@
 # DB
 bot.db
 
-# Docker / docker-compose
-Dockerfile
+# Docker-compose
 docker-compose.yml
 
 # Private info
 app/settings.py
-
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

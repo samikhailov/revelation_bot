@@ -2,13 +2,14 @@ from sqlalchemy import Column, Integer, String, DateTime, ForeignKey, Table, cre
 from sqlalchemy.orm import relationship, sessionmaker
 from sqlalchemy.sql import func
 from sqlalchemy.ext.declarative import declarative_base
+import settings
 
 
 Base = declarative_base()
 
 
 def get_session():
-    engine = create_engine("sqlite:///bot.db", echo=True)
+    engine = create_engine(settings.SQLALCHEMY_DATABASE_URI, echo=True)
     Session = sessionmaker(bind=engine)
     session = Session()
     return session
@@ -79,8 +80,5 @@ class Answer(Base):
 
 
 if __name__ == "__main__":
-    """
-    engine = create_engine("sqlite:///bot.db", echo=True)
+    engine = create_engine(settings.SQLALCHEMY_DATABASE_URI, echo=True)
     Base.metadata.create_all(engine)
-    """
-    pass
