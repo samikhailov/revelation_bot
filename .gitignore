@@ -1,0 +1,18 @@
+# IDE
+.vscode/
+
+# DB
+bot.db
+
+# Docker / docker-compose
+Dockerfile
+docker-compose.yml
+
+# Private info
+app/settings.py
+
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
